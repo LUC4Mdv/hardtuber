@@ -24,7 +24,7 @@
                 </ul>
             </div>
             <div class="login-button">
-                <a href="/">Entrar</a>
+                <a href="/">Participar</a>
             </div>
 
             <div class="mobile-menu-icon">
@@ -39,13 +39,18 @@
             </ul>
 
             <div class="login-button">
-                <a href="/">Entrar</a>
+                <a href="/">Participar</a>
             </div>
         </div>
     </header>
     <main>
         <img src="./src/img/vips/banner.png" alt="" width="100%">
-        
+        <h2 class="h2"><em>Como Funciona?</em></h2>
+        <p>A HardTuber, é um servidor de hardcore com diversos sistemas incluindo: loja, mina, farms e outros, o servidor foi criado com intuito de dar um ar competitivo a comunidade 0.15.10.</p>
+        <h2 class="h2"><em>Como Participar</em></h2>
+        <p>Para participar do servidor é preciso pagar um ingresso do valor: R$1,00 ou comprando um VIP, e tendo diversas vantagens. O Ganhador da temporada irá receber um super prêmio em dinheiro</p>
+        <h2 class="h2"><em>Temporadas</em></h2>
+        <p>Caso perca não se preocupe, o jogador terá outras chances de jogar novamente e concorrer ao top 1, apenas fique atento ao servidor do discord para ficar informado.</p>
     </main>
     <footer>
         <div id="footer_content">
@@ -105,12 +110,48 @@
 
         <div id="footer_copyright">
             &#169
-            2023 Todos direitos reservados.
+            2024 Todos direitos reservados.
         </div>
     </footer>
     <script src="src/js/script.js"></script>
 
     <style>
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            main h2.h2{
+        font-size: 2.5em;
+        margin-bottom: 4%;
+        animation: color 1.5s infinite;
+        text-align: center;
+        padding:20px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    main p{
+        width: 50%;
+        font-size: 1.4em;
+    }
+
+    @media(max-width: 768px){
+        main  h2.h2{
+            font-size: 2em
+        }
+        main p{
+            width: 80%;
+        }
+
+    }
+
+    @media(max-width: 518px){
+        main img.img{
+            width: 100%;
+        }
+    }
 
     </style>
 
