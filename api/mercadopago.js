@@ -15,7 +15,7 @@ const body = {
     },
   ],
   back_urls: {
-    success: 'https://test.com/success',
+    success: 'https://www.hardtuber.site/api/pagamento_autorizado',
     failure: 'https://test.com/failure',
     pending: 'https://test.com/pending',
   },
