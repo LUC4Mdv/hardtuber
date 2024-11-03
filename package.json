@@ -4,7 +4,7 @@
   "type": "module",
   "main": "api/script.js",
   "scripts": {
-    "start": "node --env-file=.env api/script.js"
+    "start": "node --env-file=.env public/api/script.js"
   },
   "keywords": [],
   "author": "Gold",

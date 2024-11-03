@@ -1,9 +1,15 @@
 import express from "express"
 import axios from "axios"
+import { MercadoPagoConfig, Payment } from "mercadopago"
+import process from "process"
 
 const app = express()
 
 app.use(express.json())
+
+function gerarLinkPagamento(){
+    let sdk = MercadoPagoConfig.SDK(process.env.KEYMP)
+}
 
 
 app.get("/api/pagamento_atualizado", async (req, res) => {
@@ -35,7 +41,7 @@ app.put("api/criar_pagamento", async (req,res) => {
                   currency_id: 'BRL',
                   unit_price: 2,
             }],
-                transaction_amount: Number(req.headers.value),
+                transaction_amountt: Number(req.headers.value),
                 payment_method_id: "pix",
                 payer: { 
                 name: "Player"
@@ -44,7 +50,7 @@ app.put("api/criar_pagamento", async (req,res) => {
     })
     .then((response) => {
         res.send({
-            response: response.point_off_interaction.transaction_data.ticket_url
+            response: response.point_of_interaction_off_interaction.transaction_data.ticket_url
         })
     })
     .cacth(console.log)
