@@ -17,6 +17,10 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>HardTuber</title>
+    <script>
+        import { gerarLinkPagamento } from "./api/script.js"
+        let linkIniciarPagamento = gerarLinkPagamento()
+    </script>
 </head>
 
 <body>
@@ -44,7 +48,7 @@
             <ul>
                 <li class="nav-item"><a href="/" class="nav-link "><strong>INÍCIO</strong></a></li>
                 <li class="nav-item"><a href="./sobre.html" class="nav-link"><strong>SOBRE</strong></a></li>
-                <li class="nav-item"><a href="./vips.html" class="nav-link"><strong>VIPS</strong></a></li>
+                <li class="nav-item"><a href=`{linkIniciarPagamento}` class="nav-link"><strong>VIPS</strong></a></li>
             </ul>
 
             <div class="login-button">

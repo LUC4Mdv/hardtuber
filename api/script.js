@@ -7,8 +7,31 @@ const app = express()
 
 app.use(express.json())
 
-function gerarLinkPagamento(){
+export function gerarLinkPagamento(){
     let sdk = MercadoPagoConfig.SDK(process.env.KEYMP)
+
+    payment_data = {
+        items: [
+            {
+              id: '1',
+              title: 'Vip Gold',
+              description: '» Veja todas as informações e benefícios deste VIP, em nosso servidor do Discord!',
+              picture_url: 'https://www.hardtuber.site/src/img/vips/Gold.png',
+              category_id: 'vips',
+              quantity: 1,
+              currency_id: 'BRL',
+              unit_price: 2,
+        }],
+            transaction_amountt: Number(req.headers.value),
+            payment_method_id: "pix",
+            payer: { 
+            name: "Player"
+        }
+    }
+    let result = sdk.preference().create(payment_data)
+    let payment = result["response"]
+    let linkIniciarPagamento = payment['init_point']
+    return linkIniciarPagamento
 }
 
 
