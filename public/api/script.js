@@ -1,5 +1,4 @@
 import express from "express"
-import { configDotenv } from "dotenv"
 import axios from "axios"
 
 const app = express()
@@ -25,9 +24,20 @@ app.put("api/criar_pagamento", async (req,res) => {
     })
     .create({
         body: {
-            transaction_amount: Number(req.headers.value),
-            payment_method_id: "pix",
-            payer: { 
+            items: [
+                {
+                  id: '1',
+                  title: 'Vip Gold',
+                  description: '» Veja todas as informações e benefícios deste VIP, em nosso servidor do Discord!',
+                  picture_url: 'https://www.hardtuber.site/src/img/vips/Gold.png',
+                  category_id: 'vips',
+                  quantity: 1,
+                  currency_id: 'BRL',
+                  unit_price: 2,
+            }],
+                transaction_amount: Number(req.headers.value),
+                payment_method_id: "pix",
+                payer: { 
                 name: "Player"
             }
         }

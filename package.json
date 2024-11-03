@@ -1,14 +1,13 @@
 {
   "name": "hardtuber",
-  "version": "1.0.0",
+  "version": "2.2",
   "type": "module",
-  "main": "index.js",
+  "main": "api/script.js",
   "scripts": {
-    "start": "node --env-file=.env index.js",
-    "run": ""
+    "start": "node --env-file=.env api/script.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gold",
   "license": "ISC",
   "description": "",
   "dependencies": {
